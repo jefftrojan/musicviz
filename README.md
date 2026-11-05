@@ -56,7 +56,7 @@ per-run measurements are in `analysis/full/`.
 ## Paired-comparison study
 
 The static study is published at
-[jefftrojan.github.io/musicviz](https://jefftrojan.github.io/musicviz/). It
+[mviz.robopotato.co](https://mviz.robopotato.co/). It
 runs in the browser and submits anonymous responses to the configured research
 database. If submission fails, it downloads a CSV backup instead.
 
