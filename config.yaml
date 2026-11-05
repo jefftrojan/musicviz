@@ -1,0 +1,67 @@
+audio:
+  sr: 22050
+  hop: 512
+  fps: 4
+  seconds: 8
+  start: 0
+
+mapping:
+  base_walk_speed: 0.08
+  motion_gain: 2.0
+  latent_smoothing: 0.0
+  seed: 0
+  semantic_mode: fixed
+  fixed_biggan_class: "lighthouse"
+  fixed_prompt: "an abstract cinematic landscape"
+  pitch_sensitivity: 1.0
+  chroma_classes:
+    - "daisy"
+    - "lighthouse"
+    - "grand piano"
+    - "acoustic guitar"
+    - "violin"
+    - "drum"
+    - "saxophone"
+    - "cornet"
+    - "French horn"
+    - "gong"
+    - "accordion"
+    - "marimba"
+
+control:
+  rms_weight: 0.7
+  onset_weight: 0.3
+  shift_seconds: 2.0
+  shuffle_block_seconds: 0.5
+  seed: 0
+
+backbones:
+  biggan:
+    model: biggan-deep-128
+    truncation: 0.7
+    batch: 8
+    motion_scale: 1.0
+  stylegan2:
+    repo: "vendor/stylegan2-ada-pytorch"
+    weights: "vendor/stylegan2-ada-pytorch/ffhq.pkl"
+    truncation: 0.7
+    batch: 1
+    output_resolution: 256
+    motion_scale: 1.0
+  sd:
+    model: "stable-diffusion-v1-5/stable-diffusion-v1-5"
+    resolution: 512
+    steps: 28
+    cfg: 6.5
+    strength_min: 0.30
+    strength_max: 0.65
+    prompt_style: ", cinematic, soft lighting, high detail"
+    negative: "blurry, text, watermark, low quality"
+    seed: 0
+
+songs:
+  - "songs/study/calm_blue_lake.wav"
+  - "songs/study/acoustic_shuffle.wav"
+  - "songs/study/heavy_drums_bass.wav"
+
+seeds: [0, 1, 2]

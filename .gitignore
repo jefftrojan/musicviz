@@ -1,0 +1,55 @@
+# macOS and editor metadata
+.DS_Store
+*.swp
+*.swo
+
+# Python environments and caches
+.venv/
+.kaggle-venv/
+.kaggle-cli-venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Generated experiment and downloaded notebook outputs
+output/
+kaggle/outputs/
+kaggle/package/
+kaggle/remote_notebook/
+kaggle/*.zip
+
+# Internal manuscript drafts and redundant generated artifacts
+paper/
+analysis/biggan/
+analysis/sd/
+calibration/
+config_smoke.yaml
+songs/candidates/
+songs/smoke.wav
+
+# Raw human-subject response exports
+participant_data/
+responses/
+musicviz-causal-pairs-*.csv
+
+# Upstream checkouts and downloaded model weights
+vendor/
+
+# LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.xdv
+
+# Local credentials and environment files
+.env
+.env.*
+kaggle.json
+*access_token*
+*.pem
